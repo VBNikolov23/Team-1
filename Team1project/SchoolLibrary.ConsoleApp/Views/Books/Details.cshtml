@@ -1,0 +1,14 @@
+@model Book
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<div class="details">
+    <h2>@Model.Title</h2>
+    <p class="author">@Model.Author</p>
+    <p>№ @Model.Id</p>
+    <p class="@(Model.IsBorrowed ? "taken" : "free")">
+        @(Model.IsBorrowed ? "Заета" : "Налична")
+    </p>
+    <a class="add-link" asp-action="Index">← Назад към списъка</a>
+</div>

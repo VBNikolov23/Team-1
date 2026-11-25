@@ -1,0 +1,19 @@
+@{
+    ViewData["Title"] = "Нова книга";
+}
+
+<div class="details">
+    <h2>Добавяне на книга</h2>
+
+    <form asp-action="Create" method="post" class="create-form">
+        <label for="title">Заглавие</label>
+        <input type="text" id="title" name="title" />
+
+        <label for="author">Автор</label>
+        <input type="text" id="author" name="author" />
+
+        <button type="submit">Добави</button>
+    </form>
+
+    <a class="add-link" asp-action="Index">← Назад към списъка</a>
+</div>
